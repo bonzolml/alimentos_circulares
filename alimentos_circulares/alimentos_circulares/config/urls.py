@@ -1,0 +1,4 @@
+from django.contrib import admin
+from django.urls import path
+from core import views
+urlpatterns = [path('admin/', admin.site.urls), path('', views.catalogo, name='catalogo'), path('registro/', views.registro, name='registro'), path('ingresar/', views.ingresar, name='login'), path('salir/', views.salir, name='salir'), path('publicacion/nueva/', views.nueva_publicacion, name='nueva_publicacion'), path('publicacion/<int:pk>/', views.detalle_publicacion, name='detalle_publicacion'), path('publicacion/<int:pk>/reservar/', views.reservar, name='reservar'), path('dashboard/', views.dashboard, name='dashboard'), path('mis-reservas/', views.mis_reservas, name='mis_reservas'), path('reserva/<int:pk>/estado/<str:estado>/', views.estado_reserva, name='estado_reserva'), path('reserva/<int:pk>/entrega/', views.registrar_entrega, name='registrar_entrega'), path('publicacion/<int:pk>/reportar/', views.reportar, name='reportar')]
